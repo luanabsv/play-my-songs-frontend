@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.input-field input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    transition: border-color 0.2s;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.remember-field {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remember-field input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.remember-field label {
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.submit-btn {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn button:hover {
+    background-color: #444;
+}
+
+.forgot-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}

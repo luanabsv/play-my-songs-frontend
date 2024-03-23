@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Song</title>
+    <link rel="stylesheet" href="./css/add-song.css">
+
+</head>
+<body>
+    <form id="submit-music-form">
+        <div class="form-group">
+          <label for="artist-name">Artist Name:</label>
+          <input type="text" id="artist-name" name="artist-name" required>
+        </div>
+        <div class="form-group">
+          <label for="artist-image">Artist Image:</label>
+          <input type="file" id="artist-image" name="artist-image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="music-name">Music Name:</label>
+          <input type="text" id="music-name" name="music-name" required>
+        </div>
+        <div class="form-group">
+          <label for="music-genre">Music Genre:</label>
+          <input type="text" id="music-genre" name="music-genre" required>
+        </div>
+        <div class="form-group">
+          <label for="music-file">Music File:</label>
+          <input type="file" id="music-file" name="music-file" accept=".mp3" required>
+        </div>
+        <button type="submit">Submit Music</button>
+      </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.music-listing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .artist-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .music-info {
+    flex: 1;
+  }
+  
+  .music-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .artist-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .music-genre {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  audio {
+    width: 100%;
+    max-width: 300px;
+  }
