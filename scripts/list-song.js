@@ -1,17 +1,40 @@
-function getSongs() {
-  const ol = document.getElementById("allsongs");
+let endpoint = "http://localhost:8080/apis/";
+const ol = document.getElementById("allsongs");
 
-  let endpoint = "http://localhost:8080/apis/get-all-songs";
+function searchMusic() {
+  const searchInput = document.getElementById("search").value;
 
-  fetch(endpoint)
+  if (searchInput == "") {
+    getSongs("get-all-songs", "Não há músicas cadastradas");
+  } else {
+    getSongs(
+      "get-musicas/" + searchInput,
+      "Nenhuma música encontrada com esse termo"
+    );
+  }
+}
+
+function getSongs(finalEndpoint, messageNotFound) {
+  fetch(endpoint + finalEndpoint)
     .then((response) => {
       return response.json();
     })
     .then((json) => {
       let list = "";
-      json.forEach((element) => {
-        list += `<div class="music-listing">
-        <img src="artist-image.jpg" alt="Artist name" class="artist-image" />
+
+      if (json.length > 0) {
+        json.forEach((element) => {
+          list += returnHtml(element);
+        });
+      } else list = `<li class="text-center">${messageNotFound}</li>`;
+
+      ol.innerHTML = list;
+    })
+    .catch((error) => (ol.innerHTML = `<li>Erro: ${error}</li>`));
+}
+
+function returnHtml(element) {
+  return `<div class="music-listing">
           <div class="music-info">
            <h2 class="music-name">${element.nome}</h2>
            <p class="artist-name">${element.cantor}</p>
@@ -22,34 +45,38 @@ function getSongs() {
             Your browser does not support the audio element.
           </audio>
         </div>`;
-      });
-      ol.innerHTML = list;
-    })
-    .catch((error) => (ol.innerHTML = `<li>Erro: ${error}</li>`));
 }
 
-function buscaMusicas() {
-  const musica = document.getElementsByName("musica")[0].value;
-  const tag = document.getElementById("musicas");
-  let endpoint = "http://localhost:8080/apis/get-all";
-  fetch(endpoint)
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      let lista = "";
-      const nomeArquivo = e.nome + "_" + e.estilo + "_" + e.cantor + ".mp3";
-      for (let e of json) {
-        lista += `<audio controls>
-                        <source src="${
-                          "http://localhost:8080/musicas/" + nomeArquivo
-                        }" type="audio/mpeg">
-                    </audio>
-                    <p>${e.nomeArquivo}</p>`;
-      }
-      tag.innerHTML = lista;
-    })
-    .catch((Err) => {
-      tag.innerHTML = `<li>Erro: ${Err}</li>`;
-    });
-}
+// function search() {
+//   const ol = document.getElementById("allsongs");
+//   const searchInput = document.getElementById("search").value;
+//   let endpoint = "http://localhost:8080/apis/get-musicas/" + searchInput;
+
+//   if(searchInput == '') {
+//     getSongs();
+//   } else {
+
+//     fetch(endpoint)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((json) => {
+//       let list = "";
+//       json.forEach((element) => {
+//         list += `<div class="music-listing">
+//         <div class="music-info">
+//            <h2 class="music-name">${element.nome}</h2>
+//            <p class="artist-name">${element.cantor}</p>
+//            <p class="music-genre">${element.estilo}</p>
+//            </div>
+//            <audio controls>
+//            <source src="http://localhost:8080/songs/${element.nomeArquivo}" />
+//            Your browser does not support the audio element.
+//            </audio>
+//            </div>`;
+//           });
+//           ol.innerHTML = list;
+//         })
+//         .catch((error) => (ol.innerHTML = `<li>Erro: ${error}</li>`));
+//       }
+// }
