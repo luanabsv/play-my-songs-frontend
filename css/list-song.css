@@ -1,41 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Overpass";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: calc(100vh - 58px);
+  background-color: #f0f0f0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.topbar .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar .button {
+  margin-left: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-max-width {
+  width: 1100px;
+  padding: 0 112px;
+  max-width: 100%;
+  margin: 40px auto 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container-max-width {
+    padding: 0 20px;
+  }
+}
+
+h1 {
+  font-size: 52px;
+}
+
 .music-listing {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f5f5f5;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-  }
-  
-  .artist-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 1rem;
-  }
-  
-  .music-info {
-    flex: 1;
-  }
-  
-  .music-name {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .artist-name {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .music-genre {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  audio {
-    width: 100%;
-    max-width: 300px;
-  }
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.music-info {
+  flex: 1;
+}
+
+.music-name {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.artist-name {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.music-genre {
+  margin: 0;
+  color: #666;
+  font-size: 1.25rem;
+}
+
+audio {
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-search {
+  padding: 5px 0 5px 5px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: border-color 0.2s;
+}

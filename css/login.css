@@ -1,106 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: calc(100vh - 58px);
+  background-color: #f0f0f0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Overpass';
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.topbar .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar .button {
+  margin-left: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-max-width {
+  width: 1100px;
+  padding: 0 112px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container-max-width {
+    padding: 0 20px;
+  }
+}
+
+.center-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 80px);
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-form h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #333;
+  color: #333;
+  font-size: 2rem;
+  margin: 0 0 30px;
 }
 
 .input-field {
-    margin-bottom: 20px;
-    position: relative;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .input-field label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-size: 1.2rem;
+  display: block;
+  font-family: "Overpass";
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 1.2rem;
 }
 
 .input-field input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    transition: border-color 0.2s;
+  padding: 5px 0 5px 5px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: border-color 0.2s;
 }
 
 .input-field input:focus {
-    outline: none;
-    border-color: #333;
+  outline: none;
+  border-color: #333;
 }
 
 .remember-field {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .remember-field input[type="checkbox"] {
-    margin-right: 5px;
-    cursor: pointer;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .remember-field label {
-    color: #333;
-    font-size: 1.2rem;
-    cursor: pointer;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .submit-btn {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submit-btn button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .submit-btn button:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 .forgot-password {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #333;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
 }
 
 .forgot-password:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: "Overpass";
 }
