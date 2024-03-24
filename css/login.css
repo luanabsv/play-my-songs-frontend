@@ -9,6 +9,63 @@ body {
   background-color: #f0f0f0;
 }
 
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Overpass';
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.topbar .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar .button {
+  margin-left: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-max-width {
+  width: 1100px;
+  padding: 0 112px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container-max-width {
+    padding: 0 20px;
+  }
+}
+
+.center-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 80px);
+}
+
 .login-form {
   width: 300px;
   padding: 20px;
@@ -22,7 +79,7 @@ body {
 .login-form h2 {
   color: #333;
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .input-field {
@@ -110,60 +167,4 @@ body {
 
 h2 {
   font-family: "Overpass";
-}
-
-.topbar {
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  font-family: "Overpass";
-  background-color: #333;
-  justify-content: space-between;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.topbar h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.topbar .buttons {
-  display: flex;
-  gap: 20px;
-}
-
-.topbar .button {
-  margin-left: 10px;
-  background-color: #4caf50;
-  color: white;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  margin: 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.container-max-width {
-  width: 1100px;
-  padding: 0 112px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-  .container-max-width {
-    padding: 0 20px;
-  }
-}
-
-.center-window {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
