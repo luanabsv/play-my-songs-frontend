@@ -141,3 +141,9 @@ button:hover {
 .text-center {
   text-align: center;
 }
+
+select {
+  height: 27.6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
